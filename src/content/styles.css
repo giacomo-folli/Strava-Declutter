@@ -1,0 +1,104 @@
+/* GEMINI GENERATED */
+/* Removes "Iscriviti" (Subscribe) and "Fai un regalo" (Gift) buttons */
+.nav-item.upgrade {
+    display: none !important;
+}
+
+/* 2. HIDE SYSTEM MESSAGES */
+/* Removes the IE deprecation alerts and flash messages */
+#system-messages-js,
+#ie-deprecation-message {
+    display: none !important;
+}
+
+/* 3. HIDE SIDEBAR GOALS UPSELL */
+/* Identified in your HTML as a specific JS-driven upsell container */
+.js-snw-goals-upsell {
+    display: none !important;
+}
+
+/* 4. CLEAN UP THE FOOTER */
+/* Removes the "Strava Stories" and "Recent Activities" promos in the footer */
+.footer-promos {
+    display: none !important;
+}
+
+/* 5. REDUCE SIDEBAR NOISE (Inside the Dashboard MFE) */
+/* This targets challenge and club modules often found in the sidebar */
+[data-react-class="Microfrontend"] .module:has(a[href*="/challenges"]),
+[data-react-class="Microfrontend"] .module:has(a[href*="/clubs"]) {
+    display: none !important;
+}
+
+/* CUSTOMIZED REMOVALS ADDED BY ME */
+
+.premium,
+.opt-group {
+    display: none !important;
+}
+
+/* Navbar and footer */
+#container-nav > ul a .avatar-athlete,
+#notifications {
+    display: none !important;
+}
+
+footer,
+.footer-promos,
+.footer-global {
+    display: none !important;
+}
+
+[data-log-page="training"] {
+    display: none !important;
+}
+
+/* Dashboard*/
+#main > div > div > div:nth-child(3) {
+    display: none !important;
+}
+
+#suggested-follows {
+    display: none !important;
+}
+
+#main > div > div > div.CzvkF.z3QXR.e8tR0.dVQCT.eChDjdn0 {
+    display: none !important;
+}
+
+[data-testid="web-feed-entry"] > div:nth-child(2) {
+    padding-bottom: 0 !important;
+}
+[data-testid="activity_entry_container"] > div {
+    display: none !important;
+}
+
+/* Profile Page */
+.comparison,
+.connections,
+.clubs,
+.activity-summary-v2,
+[data-cy="athlete-profile-following-tab"],
+#trophy-case-summary {
+    display: none !important;
+}
+
+/* Media Queries*/
+@media (min-width: 1100px) {
+    .LhS3Y {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        width: 100% !important;
+        max-width: 70vw !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .LhS3Y {
+        box-sizing: border-box;
+        display: flex;
+        flex: 0 0 auto;
+        width: 100% !important;
+    }
+}
