@@ -1,6 +1,7 @@
 import "./styles.css";
+import browser from "webextension-polyfill";
 
-const updateUI = (enabled: boolean) => {
+const updateUI = (enabled: boolean): void => {
   if (enabled) {
     document.body.classList.add('strava-declutter-active');
   } else {
@@ -8,13 +9,20 @@ const updateUI = (enabled: boolean) => {
   }
 };
 
-// Add type for 'result'
-chrome.storage.local.get(['extensionEnabled'], (result: { [key: string]: any }) => {
-  updateUI(result.extensionEnabled !== false);
-});
+// Initial check on page load using Promises
+const initializeExtension = async () => {
+  try {
+    const result = await browser.storage.local.get(['extensionEnabled']);
+    updateUI(result.extensionEnabled !== false);
+  } catch (error) {
+    console.error("Error accessing storage:", error);
+  }
+};
 
-// Add type for 'changes'
-chrome.storage.onChanged.addListener((changes: { [key: string]: chrome.storage.StorageChange }) => {
+initializeExtension();
+
+// Listen for changes using the polyfilled listener
+browser.storage.onChanged.addListener((changes) => {
   if (changes.extensionEnabled) {
     updateUI(changes.extensionEnabled.newValue as boolean);
   }
