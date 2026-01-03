@@ -1,28 +1,21 @@
 import "./styles.css";
 
-console.log("Strava declutter script active.");
-
-const cleanFeed = () => {
-  // Select all entries in the feed
-  const feedEntries = document.querySelectorAll(".feed-entry");
-
-  feedEntries.forEach((entry) => {
-    const entryText = entry.textContent?.toLowerCase() || "";
-
-    // Remove "Suggested" or "Promoted" content
-    if (entryText.includes("suggerito") || entryText.includes("promosso")) {
-      (entry as HTMLElement).remove();
-    }
-  });
+const updateUI = (enabled: boolean) => {
+  if (enabled) {
+    document.body.classList.add('strava-declutter-active');
+  } else {
+    document.body.classList.remove('strava-declutter-active');
+  }
 };
 
-// Create an observer to watch for new activities loading as you scroll
-const feedObserver = new MutationObserver(() => {
-  cleanFeed();
+// Add type for 'result'
+chrome.storage.local.get(['extensionEnabled'], (result: { [key: string]: any }) => {
+  updateUI(result.extensionEnabled !== false);
 });
 
-// Start observing the Dashboard Micro-Frontend container
-const dashboardContainer = document.querySelector(".dashboard-mfe");
-if (dashboardContainer) {
-  feedObserver.observe(dashboardContainer, { childList: true, subtree: true });
-}
+// Add type for 'changes'
+chrome.storage.onChanged.addListener((changes: { [key: string]: chrome.storage.StorageChange }) => {
+  if (changes.extensionEnabled) {
+    updateUI(changes.extensionEnabled.newValue as boolean);
+  }
+});

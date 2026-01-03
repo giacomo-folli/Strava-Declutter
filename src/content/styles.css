@@ -1,91 +1,99 @@
 /* GEMINI GENERATED */
 /* Removes "Iscriviti" (Subscribe) and "Fai un regalo" (Gift) buttons */
-.nav-item.upgrade {
+body.strava-declutter-active .nav-item.upgrade {
     display: none !important;
 }
 
 /* 2. HIDE SYSTEM MESSAGES */
 /* Removes the IE deprecation alerts and flash messages */
-#system-messages-js,
-#ie-deprecation-message {
+body.strava-declutter-active #system-messages-js,
+body.strava-declutter-active #ie-deprecation-message {
     display: none !important;
 }
 
 /* 3. HIDE SIDEBAR GOALS UPSELL */
 /* Identified in your HTML as a specific JS-driven upsell container */
-.js-snw-goals-upsell {
+body.strava-declutter-active .js-snw-goals-upsell {
     display: none !important;
 }
 
 /* 4. CLEAN UP THE FOOTER */
 /* Removes the "Strava Stories" and "Recent Activities" promos in the footer */
-.footer-promos {
+body.strava-declutter-active .footer-promos {
     display: none !important;
 }
 
 /* 5. REDUCE SIDEBAR NOISE (Inside the Dashboard MFE) */
 /* This targets challenge and club modules often found in the sidebar */
-[data-react-class="Microfrontend"] .module:has(a[href*="/challenges"]),
-[data-react-class="Microfrontend"] .module:has(a[href*="/clubs"]) {
+body.strava-declutter-active
+    [data-react-class="Microfrontend"]
+    .module:has(a[href*="/challenges"]),
+body.strava-declutter-active
+    [data-react-class="Microfrontend"]
+    .module:has(a[href*="/clubs"]) {
     display: none !important;
 }
 
 /* CUSTOMIZED REMOVALS ADDED BY ME */
 
-.premium,
-.opt-group {
+body.strava-declutter-active .premium,
+body.strava-declutter-active .opt-group {
     display: none !important;
 }
 
 /* Navbar and footer */
-#container-nav > ul a .avatar-athlete,
-#notifications {
+body.strava-declutter-active #container-nav > ul a .avatar-athlete,
+body.strava-declutter-active #notifications {
     display: none !important;
 }
 
-footer,
-.footer-promos,
-.footer-global {
+body.strava-declutter-active footer,
+body.strava-declutter-active .footer-promos,
+body.strava-declutter-active .footer-global {
     display: none !important;
 }
 
-[data-log-page="training"] {
+body.strava-declutter-active [data-log-page="training"] {
     display: none !important;
 }
 
 /* Dashboard*/
-#main > div > div > div:nth-child(3) {
+body.strava-declutter-active #main > div > div > div:nth-child(3) {
     display: none !important;
 }
 
-#suggested-follows {
+body.strava-declutter-active #suggested-follows {
     display: none !important;
 }
 
-#main > div > div > div.CzvkF.z3QXR.e8tR0.dVQCT.eChDjdn0 {
+body.strava-declutter-active
+    #main
+    > div
+    > div
+    > div.CzvkF.z3QXR.e8tR0.dVQCT.eChDjdn0 {
     display: none !important;
 }
 
-[data-testid="web-feed-entry"] > div:nth-child(2) {
+body.strava-declutter-active [data-testid="web-feed-entry"] > div:nth-child(2) {
     padding-bottom: 0 !important;
 }
-[data-testid="activity_entry_container"] > div {
+body.strava-declutter-active [data-testid="activity_entry_container"] > div {
     display: none !important;
 }
 
 /* Profile Page */
-.comparison,
-.connections,
-.clubs,
-.activity-summary-v2,
-[data-cy="athlete-profile-following-tab"],
-#trophy-case-summary {
+body.strava-declutter-active .comparison,
+body.strava-declutter-active .connections,
+body.strava-declutter-active .clubs,
+body.strava-declutter-active .activity-summary-v2,
+body.strava-declutter-active [data-cy="athlete-profile-following-tab"],
+body.strava-declutter-active #trophy-case-summary {
     display: none !important;
 }
 
 /* Media Queries*/
 @media (min-width: 1100px) {
-    .LhS3Y {
+    body.strava-declutter-active .LhS3Y {
         box-sizing: border-box;
         display: flex;
         flex: 0 0 auto;
@@ -95,7 +103,7 @@ footer,
 }
 
 @media (max-width: 1200px) {
-    .LhS3Y {
+    body.strava-declutter-active .LhS3Y {
         box-sizing: border-box;
         display: flex;
         flex: 0 0 auto;
