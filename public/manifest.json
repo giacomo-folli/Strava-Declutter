@@ -30,9 +30,10 @@
   "permissions": ["storage"],
   "browser_specific_settings": {
     "gecko": {
-      "id": "strava-declutter@giacomofolli.com",
+      "id": "@strava-declutter.giacomofolli",
       "strict_min_version": "109.0",
       "data_collection_permissions": {
+        "required": ["none"],
         "collect_personal_data": false,
         "collect_technical_data": false
       }
