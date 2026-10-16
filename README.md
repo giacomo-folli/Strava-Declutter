@@ -6,11 +6,11 @@
 
 A small Firefox extension that declutters the Strava web interface by hiding or simplifying UI elements for a cleaner experience.
 
-## Screenshot
+<!-- ## Screenshot -->
 
-![Screenshot of Strava Declutter in action](docs/screenshot.png)
+<!-- ![Screenshot of Strava Declutter in action](docs/screenshot.png) -->
 
-> Replace docs/screenshot.png with an actual screenshot of the addon in use (or link the screenshot hosted on the add-on page).
+<!-- > Replace docs/screenshot.png with an actual screenshot of the addon in use (or link the screenshot hosted on the add-on page). -->
 
 ## Features
 
